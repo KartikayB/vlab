@@ -105,7 +105,7 @@
                         </a>
                     </li>
                     <li class="treeview">
-                        <a href="simulation.html">
+                        <a href="public/sw.html">
                             <i class="fa fa-laptop"></i>
                             <span>Simulation</span>
                             <span class="pull-right-container">
@@ -178,41 +178,7 @@
                         <li>On receiving the acknowledgment frame, the sender understands that the receiver is ready to accept the next frame. So it sender the next frame in queue.</li>
                         <li>If the ACK does not reach the sender before a certain time, known as the timeout, the sender sends the same frame again.The timeout countdown is reset after each frame transmission.</li>
                     </ul>
-                    <br>
-                    <h4>Go Back N Protocol </h4>
-                    <p>
-                        It is a specific instance of the automatic repeat request (ARQ) protocol. The sender sends a specific number of frames called “Window Size”.For the given window size, the sending procedure continues without receiving an acknowledgement .It can transmit
-                        N frames to peers before requiring an acknowledgement(ACK).The transmit window size in N and the receive window size is 1. This protocol involves the following transitions −
-
-                    </p>
-                    <ul>
-                        <li>
-                            A sender sends multiple frames as allowed by the window size.
-                        </li>
-                        <li>Receiver sends ACK for every valid frame received.</li>
-                        <li>Once the sender receives the acknowledgement of one frame, the next frame in the queue is sent.</li>
-                        <li>If the ACK does not reach the sender before a certain time, known as the timeout, the sender sends N frames, from the frame for which the acknowledgement is lost. The timeout countdown is reset after each frame transmission.
-                        </li>
-                    </ul>
-                    <br>
-                    <h4>Selective Repeat Protocol
-                    </h4>
-                    <p>
-                        Selective Repeat is part of the automatic repeat request (ARQ). With selective repeat, the sender sends a number of frames specified by a window size even without the need to wait for individual ACK from the receiver as in Go-Back-N ARQ. The receiver
-                        accepts out-of-order frames and buffers them. The sender individually retransmits frames that have timed out. This protocol involves the following transitions −
-
-                    </p>
-                    <ul>
-
-                        <li>A sender can send multiple frames as allowed by the window size.
-                        </li>
-                        <li>The receiver sends the acknowledgement for each frame.</li>
-                        <li>If the acknowledgement for a particular frame is not received, then the sender resends that frame again without disturbing the flow of others.</li>
-                        <li>The receiver side, if the frame received is corrupted, then the receiver can send a negative acknowledgement.
-                        </li>
-                        <li>When negative acknowledgement is received by the sender, then that particular frame is re-sent similarly.</li>
-
-                    </ul>
+                    
                 </div>
             </section>
             <!-- /.content -->
