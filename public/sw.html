@@ -10,7 +10,17 @@
 
     <meta charset="utf-8">
 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
 </head>
+<script>
+    $(function() {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 
 <body>
    <div>
@@ -24,60 +34,19 @@
            <div class="title">
            <a href="Go_Back.html"><h3> Stop-and-Wait</h3></a> 
            </div>
-
-     <button id="btn" type="button" class="btn btn-outline-success" data-toggle="modal"  data-target="#exampleModal">
-                Instruction Tab
-              </button>
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-scrollable" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Instructions</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-        <p>Procedure for Stop and Wait ARQ</p>
-       <ol>
-    
-    <li>The aim is to introduce the students to the working of the Stop and Wait ARQ and how it behaves under the situations such as Frame Lost or Acknowledgement lost.</li>
-    <li>Once one selects the Stop-and-Wait ARQ, then they are redirected to the simulation page</li>
-    <li>Since Stop and Wait ARQ does not follow sliding window protocol, ONLY ONE frame should be selected at a time to move ahead with the simulation</li>
-    <li>The user needs to make the right selections in the array for the simulation to run further.</li>
-    <li>If the user fails to select the correct frame at any point of simulation , the “Wrong Frame Selected” is prompted on the right side of the screen and until the user successfully selects the correct frame , the simulation does not proceed and the User is given as many retries as needed.</li>
-    <li>An index is provided to the left of the screen to allow the user to understand which color signifies what behaviour.</li>
-    <li>An index is provided to the left of the screen to allow the user to understand which color signifies what behaviour.</li>
-</ol>
-    </div>
-     <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      
-                    </div>
-                  </div>
-                </div>
-              </div>
-        <div  class="card" style="width: 18rem; float: right; margin: 4rem;">
-                <div class="card-body">
-                  
-                    <p class="right"></p>
-                  
-                </div>
-              </div>       
+<div></div>
+    <div>
+        <button id="btn" type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Choose frame size from the list, the array on the left represent the frames. The user needs to make the right selections in the array for the simulation to run further.If the user fails to select the correct frames at any point of simulation 'Wrong frame selected' is displayed and the simulation doessnt continue until the correct frame is selected .">
+            Instruction
+          </button>
+    </div>   
 
     <div class="footer">
         <P>Copyrights Virtual lab IIT Roorkee</P>
     </div>
 
     <script src="./js/Stop_And_Wait.js"></script>
-    <script>
-         function openMenu() {
-      document.querySelector(".sidebar").classList.add("open");
-    }
-    function closeMenu() {
-      document.querySelector(".sidebar").classList.remove("open")
-    }
-    </script>
+    
 
     <!-- <script src="sketch.js"></script> -->
 
