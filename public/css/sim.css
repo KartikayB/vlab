@@ -51,8 +51,8 @@ canvas {
     margin-top: 0.5rem;
     background:  #ff6600;
     border: 4px solid  #ff6600;
-    width:361%;
-    height: 10%;
+    width:100%;
+    
 }
 .title{
     margin: 1rem;
